@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Outfit:wght@200;400;500&display=swap');
 *{
     margin:0;
     padding:0;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', 'Gothic A1', sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -20,6 +20,7 @@ body{
 
 input[type="text"]{
     width:100%;
+    max-width: 400px;
     height:50px;
     border-radius: 0;
     padding:0 15px;
@@ -47,11 +48,23 @@ button{
     border:0;
     font-size: 18px;
     color:#FFF;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-.hidden {
-    display: none;
+.btn_login:hover{
+    box-shadow: 0px 0px 25px rgb(13 94 206);
+    border-color:2px solid #569bfa;
 }
+
+
+.login_form > form{
+    display: flex;
+    width: 505px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .before_login{
     display: flex;
@@ -59,6 +72,10 @@ button{
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.before_login.hidden {
+    display: none;
 }
 
 .after_login{

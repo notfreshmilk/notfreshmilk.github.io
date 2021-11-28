@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const statusLogout = document.querySelector(".before_login");
 const statusLogin = document.querySelector(".after_login");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -16,7 +17,8 @@ function onLoginSubmit(event) {
   }
   
 function paintGreetings(username) {
-    statusLogin.classList.add("on")
+    statusLogout.classList.add("hidden");
+    statusLogin.classList.add("on");
     greeting.innerHTML = `Make today your day!<br><span class="username">${username}</span>`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
